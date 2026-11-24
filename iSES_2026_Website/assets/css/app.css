@@ -1050,3 +1050,633 @@ tr:last-child td{
     scroll-behavior:auto !important;
   }
 }
+
+
+/* =========================================
+   iSES PROGRAM SCHEDULE
+   ========================================= */
+
+.schedule-wrap {
+    --program-blue: #93c5fd;
+    --program-text: #e2e8f0;
+    --program-muted: #b4c2d8;
+    --program-border: #35435d;
+    --program-surface: #151e32;
+    --program-header: #1e304b;
+    color: var(--program-text);
+}
+
+
+/* Program Introduction */
+
+.schedule-wrap .program-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.schedule-wrap .program-intro h2 {
+    font-size: 1.8em;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.schedule-wrap .program-intro p {
+    color: var(--program-text);
+    margin-bottom: 8px;
+}
+
+.schedule-wrap .program-dates {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--program-blue);
+}
+
+
+/* Quick Navigation */
+
+.schedule-wrap .program-navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0 40px;
+}
+
+.schedule-wrap .program-navigation a {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #1e304b;
+    border: 1px solid #45658c;
+    border-radius: 6px;
+    color: #e0ecff;
+    font-size: 0.95em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.schedule-wrap .program-navigation a:hover,
+.schedule-wrap .program-navigation a:focus-visible {
+    background: #93c5fd;
+    border-color: #93c5fd;
+    color: #0d1220;
+}
+
+
+/* Section Headings */
+
+.schedule-wrap .program-section {
+    margin-bottom: 45px;
+    scroll-margin-top: 100px;
+}
+
+.schedule-wrap .program-section-heading {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.schedule-wrap .program-section-subheading {
+    text-align: center;
+    color: var(--program-muted);
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+
+/* Shared Table Styling */
+
+.schedule-wrap .schedule-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.schedule-wrap .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 0;
+    color: var(--program-text);
+    background: var(--program-surface);
+}
+
+.schedule-wrap .schedule-table th,
+.schedule-wrap .schedule-table td {
+    border: 1px solid var(--program-border);
+    padding: 15px 12px;
+    vertical-align: middle;
+    line-height: 1.6;
+    white-space: normal;
+    overflow-wrap: break-word;
+    color: var(--program-text);
+    background: var(--program-surface);
+}
+
+.schedule-wrap .schedule-table .header-row-1 {
+    padding: 16px;
+    background: #24466b;
+    color: #ffffff;
+    font-size: 1.15em;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.schedule-wrap .schedule-table .time-header,
+.schedule-wrap .schedule-table .room-header {
+    background: #1e304b;
+    color: #e0ecff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.schedule-wrap .schedule-table .time-cell {
+    background: #1b2940;
+    color: #e2e8f0;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+
+/* =========================================
+   PRE-CONFERENCE TUTORIALS
+   ========================================= */
+
+.schedule-wrap .tutorial-schedule-table {
+    min-width: 650px;
+    table-layout: auto;
+}
+
+.schedule-wrap .tutorial-schedule-table .time-header {
+    width: 18%;
+}
+
+.schedule-wrap .tutorial-schedule-table .room-header:nth-child(2) {
+    width: 37%;
+}
+
+.schedule-wrap .tutorial-schedule-table .room-header:nth-child(3) {
+    width: 45%;
+}
+
+.schedule-wrap .tutorial-speakers {
+    text-align: left;
+    background: #151e32;
+    color: #e2e8f0;
+}
+
+.schedule-wrap .tutorial-speaker {
+    padding: 5px 0;
+}
+
+.schedule-wrap .tutorial-speaker + .tutorial-speaker {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--program-border);
+}
+
+.schedule-wrap .speaker-name {
+    display: block;
+    color: #93c5fd;
+    font-size: 1.05em;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.schedule-wrap .speaker-designation {
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.schedule-wrap .speaker-affiliation {
+    font-size: 0.9em;
+    color: #b4c2d8;
+    line-height: 1.6;
+}
+
+.schedule-wrap .schedule-table .tutorial-title {
+    text-align: left;
+    font-weight: 600;
+    font-size: 1em;
+    color: #f1f5f9;
+    background: #182238;
+}
+
+
+/* =========================================
+   TECHNICAL PROGRAM
+   ========================================= */
+
+.schedule-wrap .conference-day {
+    margin-bottom: 35px;
+    scroll-margin-top: 100px;
+}
+
+.schedule-wrap .technical-schedule-table {
+    min-width: 1050px;
+    font-size: 0.95em;
+    table-layout: auto;
+}
+
+.schedule-wrap .technical-schedule-table .time-header {
+    width: 14%;
+}
+
+.schedule-wrap .technical-schedule-table .room-header {
+    width: 17.2%;
+}
+
+.schedule-wrap .room-venue {
+    display: block;
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #cbd5e1;
+    margin-top: 5px;
+}
+
+
+/* Room Header Colors */
+
+.schedule-wrap .schedule-table .room-header-1 {
+    background: #203c5c;
+    color: #dbeafe;
+}
+
+.schedule-wrap .schedule-table .room-header-2 {
+    background: #1b403b;
+    color: #d1fae5;
+}
+
+.schedule-wrap .schedule-table .room-header-3 {
+    background: #382e55;
+    color: #ede9fe;
+}
+
+.schedule-wrap .schedule-table .room-header-4 {
+    background: #493824;
+    color: #ffedd5;
+}
+
+.schedule-wrap .schedule-table .room-header-5 {
+    background: #493047;
+    color: #fce7f3;
+}
+
+
+/* Parallel Sessions */
+
+.schedule-wrap .session-name {
+    display: block;
+    font-size: 1.05em;
+    font-weight: 700;
+    color: #93c5fd;
+}
+
+.schedule-wrap .session-time {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #e2e8f0;
+    margin-top: 6px;
+}
+
+.schedule-wrap .schedule-table .session-cell {
+    text-align: center;
+    vertical-align: top;
+    padding: 18px 12px;
+}
+
+.schedule-wrap .session-type {
+    display: block;
+    margin-bottom: 8px;
+    color: #b4c2d8;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.78em;
+    font-weight: 700;
+}
+
+.schedule-wrap .track-title {
+    color: #f1f5f9;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.schedule-wrap .track-title strong {
+    color: #93c5fd;
+}
+
+.schedule-wrap .paper-ids {
+    padding-top: 10px;
+    border-top: 1px solid #45536b;
+    color: #bfdbfe;
+    font-size: 0.95em;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.schedule-wrap .paper-label {
+    display: block;
+    color: #cbd5e1;
+    font-weight: 700;
+    font-size: 0.85em;
+    margin-bottom: 4px;
+}
+
+
+/* Session Category Colors */
+
+.schedule-wrap .schedule-table .session-tt {
+    background: #17263c;
+    color: #e2e8f0;
+}
+
+.schedule-wrap .schedule-table .session-ss {
+    background: #352b20;
+    color: #ffedd5;
+}
+
+.schedule-wrap .session-ss .session-type {
+    color: #fbbf77;
+}
+
+.schedule-wrap .session-ss .track-title {
+    color: #ffedd5;
+}
+
+.schedule-wrap .session-ss .paper-ids {
+    color: #fed7aa;
+    border-top-color: #665139;
+}
+
+.schedule-wrap .schedule-table .session-student {
+    background: #1c352e;
+    color: #d1fae5;
+}
+
+.schedule-wrap .session-student .track-title {
+    color: #d1fae5;
+}
+
+.schedule-wrap .session-student .paper-ids {
+    color: #a7f3d0;
+    border-top-color: #365b4d;
+}
+
+.schedule-wrap .schedule-table .empty-session {
+    background: #111827;
+    color: #94a3b8;
+    text-align: center;
+}
+
+
+/* Common Events */
+
+.schedule-wrap .schedule-table .common-event-cell {
+    text-align: center;
+    font-weight: 700;
+    padding: 14px;
+    color: #f1f5f9;
+}
+
+.schedule-wrap .event-registration .common-event-cell {
+    background: #263449;
+    color: #e2e8f0;
+}
+
+.schedule-wrap .event-ceremony .common-event-cell {
+    background: #382d51;
+    color: #ede9fe;
+}
+
+.schedule-wrap .event-keynote .common-event-cell {
+    background: #203b58;
+    color: #dbeafe;
+}
+
+.schedule-wrap .event-social .common-event-cell {
+    background: #204437;
+    color: #d1fae5;
+}
+
+
+/* Schedule Legend */
+
+.schedule-wrap .program-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin: 20px 0 25px;
+    font-size: 0.9em;
+    color: #cbd5e1;
+}
+
+.schedule-wrap .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #e2e8f0;
+}
+
+.schedule-wrap .legend-color {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #64748b;
+    border-radius: 3px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.schedule-wrap .legend-tt {
+    background: #17263c;
+}
+
+.schedule-wrap .legend-ss {
+    background: #352b20;
+    border-color: #b58a50;
+}
+
+.schedule-wrap .legend-student {
+    background: #1c352e;
+    border-color: #599b80;
+}
+
+
+/* Notes and Navigation */
+
+.schedule-wrap .program-back-top {
+    text-align: right;
+    font-size: 0.9em;
+    margin-top: -10px;
+}
+
+.schedule-wrap .program-back-top a {
+    text-decoration: none;
+    color: #93c5fd;
+}
+
+.schedule-wrap .program-back-top a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.schedule-wrap .program-note {
+    padding: 20px;
+    border: 1px solid #35435d;
+    border-left: 4px solid #93c5fd;
+    border-radius: 6px;
+    background: #151e32;
+}
+
+.schedule-wrap .program-note p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: #cbd5e1;
+}
+
+.schedule-wrap .program-note strong {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   RESPONSIVE LAYOUT
+   ========================================= */
+
+@media screen and (max-width: 736px) {
+
+    .schedule-wrap .program-intro h2 {
+        font-size: 1.4em;
+    }
+
+    .schedule-wrap .program-section-heading {
+        font-size: 1.3em;
+    }
+
+    .schedule-wrap .program-navigation a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .schedule-wrap .schedule-table th,
+    .schedule-wrap .schedule-table td {
+        padding: 12px 10px;
+    }
+
+    .schedule-wrap .program-legend {
+        justify-content: flex-start;
+    }
+
+    .schedule-wrap .technical-schedule-table {
+        font-size: 0.9em;
+    }
+
+}
+
+
+/* =========================================
+   PRINT LAYOUT
+   ========================================= */
+
+@media print {
+
+    .schedule-wrap .program-navigation,
+    .schedule-wrap .program-back-top {
+        display: none;
+    }
+
+    .schedule-wrap .schedule-table-wrapper {
+        overflow: visible;
+    }
+
+    .schedule-wrap .technical-schedule-table,
+    .schedule-wrap .tutorial-schedule-table {
+        min-width: 0;
+        font-size: 9pt;
+    }
+
+    .schedule-wrap .schedule-table th,
+    .schedule-wrap .schedule-table td,
+    .schedule-wrap .schedule-table td *,
+    .schedule-wrap .schedule-table th * {
+        color: #000000 !important;
+        background: #ffffff !important;
+        border-color: #aaaaaa !important;
+    }
+
+    .schedule-wrap .program-intro *,
+    .schedule-wrap .program-section-heading,
+    .schedule-wrap .program-section-subheading,
+    .schedule-wrap .program-legend *,
+    .schedule-wrap .program-note * {
+        color: #000000 !important;
+    }
+
+    .schedule-wrap .program-note {
+        background: #ffffff;
+    }
+
+    .schedule-wrap .schedule-table tr {
+        break-inside: avoid;
+    }
+
+    .schedule-wrap .conference-day {
+        break-before: page;
+    }
+
+    .schedule-wrap .schedule-table thead {
+        display: table-header-group;
+    }
+
+}
+/* Presentation Template */
+
+.schedule-wrap .presentation-template-box {
+    background: #151e32;
+    border: 1px solid #35435d;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.schedule-wrap .presentation-template-box h3 {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.schedule-wrap .presentation-template-box p {
+    color: #cbd5e1;
+    font-size: 0.95em;
+    margin-bottom: 18px;
+}
+
+.schedule-wrap .presentation-download {
+    display: inline-block;
+    background: #24466b;
+    color: #ffffff;
+    border: 1px solid #45658c;
+    border-radius: 6px;
+    padding: 12px 22px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.schedule-wrap .presentation-download:hover,
+.schedule-wrap .presentation-download:focus-visible {
+    background: #93c5fd;
+    color: #0d1220;
+    border-color: #93c5fd;
+}
